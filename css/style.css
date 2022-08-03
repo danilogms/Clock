@@ -77,7 +77,9 @@ footer p {
 }
 .clock .number.number-6 {
   --rotation: 180deg;
+  transform: translateY(90%);
 }
+
 .clock .number.number-7 {
   --rotation: 210deg;
 }
@@ -99,8 +101,8 @@ footer p {
 
 /* PONTEIROS */
 
-.clock::after{
-  content: '';
+.clock::after {
+  content: "";
   position: absolute;
   width: 10px;
   height: 10px;
@@ -109,7 +111,7 @@ footer p {
   border-radius: 50%;
   z-index: 11;
   background-color: black;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .clock .ponteiro {
@@ -119,29 +121,93 @@ footer p {
   left: 50%;
   z-index: 10;
   background-color: black;
-  transform: translateX(
-    -50%
-  )rotate(calc(var(--rotation) *1deg)); /* MOVENDO NO EIXO HORIZONTAL METADE DA LARGURA DO ELEMENTO */ /*CONVERTENDO ROTATION PARA DEG*/
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg)); /* MOVENDO NO EIXO HORIZONTAL METADE DA LARGURA DO ELEMENTO */ /*CONVERTENDO ROTATION PARA DEG*/
   transform-origin: bottom; /*O EFEITO SAI COM A BASE SENDO O BOTTOM*/
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-
 .clock .ponteiro.seconds {
   width: 3px;
   height: 40%;
-  background-color: red;
+  background-color: #04fc43;
 }
 
 .clock .ponteiro.minutes {
   width: 7px;
   height: 35%;
-  background-color: black;
+  background-color: #fee800;
 }
 
 .clock .ponteiro.hours {
   width: 10px;
   height: 25%;
-  background-color: black;
+  background-color: #ff2972;
+}
+
+.digital-clock {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  border: 2px solid #ff2972;
+  box-shadow: 4px;
+  border-radius: 5px;
+  display: flex;
+  font-size: 2em;
+  justify-content: center;
+  align-content: center;
+  margin: 50px auto;
+  padding: 10px;
+  gap: 15px;
+}
+
+.digital-clock .digital-hour {
+  color: #ff2972;
+  position: relative;
+}
+
+.digital-clock .digital-hour::after {
+  content: ":";
+  position: absolute;
+  right: -9px;
+  top: -2px;
+  color: #ff2972;
+}
+
+.digital-clock .digital-minutes {
+  color: #fee800;
+  position: relative;
+}
+
+.digital-clock .digital-minutes::after {
+  content: ":";
+  position: absolute;
+  right: -9px;
+  top: -2px;
+  color: #fee800;
+}
+
+.digital-clock .digital-minutes::after {
+  animation: relogio 1s steps(1) infinite;
+}
+
+@keyframes relogio {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.digital-clock .digital-seconds {
+  color: #04fc43;
+}
+
+.digital-clock .digital-ampm {
+  color: rgb(43, 205, 226);
+  font-size: 0.5em;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
