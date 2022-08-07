@@ -68,6 +68,8 @@ footer p {
 }
 .clock .number.number-3 {
   --rotation: 90deg;
+  font-weight: 700;
+  font-size: 1.9em;
 }
 .clock .number.number-4 {
   --rotation: 120deg;
@@ -77,7 +79,8 @@ footer p {
 }
 .clock .number.number-6 {
   --rotation: 180deg;
-  transform: translateY(90%);
+  font-weight: 700;
+  font-size: 1.9em;
 }
 
 .clock .number.number-7 {
@@ -88,6 +91,8 @@ footer p {
 }
 .clock .number.number-9 {
   --rotation: 270deg;
+  font-weight: 700;
+  font-size: 1.9em;
 }
 .clock .number.number-10 {
   --rotation: 300deg;
@@ -97,6 +102,45 @@ footer p {
 }
 .clock .number.number-12 {
   --rotation: 0deg;
+  font-weight: 700;
+  font-size: 1.9em;
+}
+
+.number-text-1 {
+  transform: rotateZ(330deg);
+}
+.number-text-2 {
+  transform: rotateZ(300deg);
+}
+.number-text-3 {
+  transform: rotateZ(270deg);
+}
+.number-text-4 {
+  transform: rotateZ(240deg);
+}
+.number-text-5 {
+  transform: rotateZ(210deg);
+}
+.number-text-6 {
+  transform: rotateZ(180deg);
+}
+.number-text-7 {
+  transform: rotateZ(150deg);
+}
+.number-text-8 {
+  transform: rotateZ(120deg);
+}
+.number-text-9 {
+  transform: rotateZ(90deg);
+}
+.number-text-10 {
+  transform: rotateZ(60deg);
+}
+.number-text-11 {
+  transform: rotateZ(30deg);
+}
+.number-text-12 {
+  transform: rotateZ(360deg);
 }
 
 /* PONTEIROS */
@@ -149,7 +193,7 @@ footer p {
   flex: 1;
   max-width: 300px;
   text-align: center;
-  border: 2px solid #ff2972;
+  border: 2px solid #ff29705e;
   box-shadow: 4px;
   border-radius: 5px;
   display: flex;
