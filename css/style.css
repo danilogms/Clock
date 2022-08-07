@@ -43,7 +43,7 @@ footer p {
   height: 400px;
   background-color: white;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 4px solid #ff29705e;
   position: relative;
   margin: 0 auto;
 }
